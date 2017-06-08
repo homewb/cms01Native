@@ -1,0 +1,3 @@
+rootProject.name = 'cms01Native'
+
+include ':app'
