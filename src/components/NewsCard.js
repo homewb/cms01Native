@@ -4,7 +4,8 @@ import {
   View,
   Image,
   Text,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 // import { Card, CardItem, Text } from 'native-base';
 
@@ -82,7 +83,7 @@ export default class NewsCard extends Component {
 
     render() {
         return (
-            <TouchableHighlight onPress={() => this.props.onPress(this.props.id)}>
+            <TouchableOpacity onPress={() => this.props.onPress(this.props.id)}>
                 <View style={styles.card}>
                     <Image source={{url: 'http://www.aocai.com.au' + this.props.image}} style={styles.backgroundImage}>
                         <Text style={styles.backgroundImageInnerText}>{this.props.title.trim()}</Text>
@@ -92,7 +93,7 @@ export default class NewsCard extends Component {
                         <Text style={[styles.cardContentInner, styles.cardContentLastP]}>{this.props.description.trim()}</Text>
                     </View>
                 </View>
-            </TouchableHighlight>
+            </TouchableOpacity>
         )
     }
 
